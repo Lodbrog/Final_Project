@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.final_project">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".PyramidOfGizaActivity"
+            android:label="@string/pyramid_of_giza_title">
+        </activity>
+        <activity android:name=".BabylonActivity"
+            android:label="@string/babylon_title">
+        </activity>
+        <activity android:name=".ArtemisActivity"
+            android:label="@string/artemis_title">
+        </activity>
+        <activity android:name=".StatueOfZeusActivity"
+            android:label="@string/statue_of_zeus_title">
+        </activity>
+        <activity android:name=".HalicarnassusActivity"
+            android:label="@string/halicarnassus_title">
+        </activity>
+        <activity android:name=".ColossusActivity"
+            android:label="@string/colossus_title">
+        </activity>
+        <activity android:name=".AlexandriaActivity"
+            android:label="@string/alexandria_title">
+        </activity>
+    </application>
+
+</manifest>
