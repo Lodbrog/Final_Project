@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E6EE9C"
     tools:context="com.example.android.courtcounter.MainActivity">
 
     <RelativeLayout
@@ -24,12 +25,12 @@
             android:id="@+id/about_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
             android:fontFamily="sans-serif-light"
             android:gravity="center_horizontal"
             android:paddingBottom="24dp"
-            android:layout_below="@id/title"
-            android:layout_marginRight="24dp"
-            android:layout_marginLeft="24dp"
             android:text="@string/about_text"
             android:textColor="#000000"
             android:textSize="14sp" />
@@ -37,8 +38,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_below="@id/about_content">
+            android:layout_below="@id/about_content"
+            android:orientation="horizontal">
 
 
             <LinearLayout
@@ -49,97 +50,153 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="128dp">
+                    android:layout_height="150dp">
 
                     <ImageView
-                        android:src="@drawable/giza"
+                        android:id="@+id/pyramid_of_giza"
                         android:layout_width="match_parent"
-                        android:layout_height="128dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginRight="24dp" />
+                        android:layout_height="112dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/giza" />
 
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="128dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginRight="24dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
                         android:background="@android:color/transparent"
-                        android:onClick="pyramidOfGiza"
-                        android:text="Great Pyramid of Giza" />
+                        android:onClick="pyramidOfGiza" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/pyramid_of_giza"
+                        android:layout_centerHorizontal="true"
+                        android:text="Great Pyramid of Giza"
+                        android:textAllCaps="true"
+                        android:textColor="#212121"
+                        android:textSize="8sp" />
 
                 </RelativeLayout>
 
-                <RelativeLayout
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="128dp">
-
-                    <ImageView
-                        android:src="@drawable/artemis"
-                        android:layout_width="match_parent"
-                        android:layout_height="128dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginRight="24dp" />
-
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="128dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginRight="24dp"
-                        android:background="@android:color/transparent"
-                        android:onClick="artemis"
-                        android:text="Temple of Artemis" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="128dp">
-
-                    <ImageView
-                        android:src="@drawable/halicarnassus"
-                        android:layout_width="match_parent"
-                        android:layout_height="128dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginRight="24dp" />
-
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="128dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginRight="24dp"
-                        android:background="@android:color/transparent"
-                        android:onClick="halicarnassus"
-                        android:text="Mausoleum at Halicarnassus" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="128dp">
-
-                <ImageView
-                    android:src="@drawable/alexandria"
-                    android:layout_width="match_parent"
-                    android:layout_height="128dp"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
                     android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp" />
+                    android:background="@android:color/darker_gray" />
 
-                <Button
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="128dp"
+                    android:layout_height="150dp">
+
+                    <ImageView
+                        android:id="@+id/artemis"
+                        android:layout_width="match_parent"
+                        android:layout_height="112dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/artemis" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="128dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:background="@android:color/transparent"
+                        android:onClick="artemis" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/artemis"
+                        android:layout_centerHorizontal="true"
+                        android:text="Temple of Artemis"
+                        android:textAllCaps="true"
+                        android:textColor="#212121"
+                        android:textSize="8sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
                     android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
-                    android:background="@android:color/transparent"
-                    android:onClick="alexandria"
-                    android:text="Lighthouse of Alexandria" />
+                    android:background="@android:color/darker_gray" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp">
+
+                    <ImageView
+                        android:id="@+id/halicarnassus"
+                        android:layout_width="match_parent"
+                        android:layout_height="112dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/halicarnassus" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="128dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:background="@android:color/transparent"
+                        android:onClick="halicarnassus" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/halicarnassus"
+                        android:layout_centerHorizontal="true"
+                        android:text="Mausoleum at Halicarnassus"
+                        android:textAllCaps="true"
+                        android:textColor="#212121"
+                        android:textSize="8sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@android:color/darker_gray" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp">
+
+                    <ImageView
+                        android:id="@+id/alexandria"
+                        android:layout_width="match_parent"
+                        android:layout_height="112dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/alexandria" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="128dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:background="@android:color/transparent"
+                        android:onClick="alexandria" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/alexandria"
+                        android:layout_centerHorizontal="true"
+                        android:text="Lighthouse of Alexandria"
+                        android:textAllCaps="true"
+                        android:textColor="#212121"
+                        android:textSize="8sp" />
 
                 </RelativeLayout>
 
@@ -158,75 +215,116 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="128dp">
+                    android:layout_height="150dp">
 
                     <ImageView
-                        android:src="@drawable/babylon"
+                        android:id="@+id/babylon"
                         android:layout_width="match_parent"
-                        android:layout_height="128dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginRight="24dp" />
+                        android:layout_height="112dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/babylon" />
 
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="128dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginRight="24dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
                         android:background="@android:color/transparent"
-                        android:onClick="babylon"
-                        android:text="Hanging Gardens of Babylon" />
+                        android:onClick="babylon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/babylon"
+                        android:layout_centerHorizontal="true"
+                        android:text="Hanging Gardens of Babylon"
+                        android:textAllCaps="true"
+                        android:textColor="#212121"
+                        android:textSize="8sp" />
 
                 </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@android:color/darker_gray" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="128dp">
+                    android:layout_height="150dp">
 
                     <ImageView
-                        android:src="@drawable/zeus"
+                        android:id="@+id/statue_of_zeus"
                         android:layout_width="match_parent"
-                        android:layout_height="128dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginRight="24dp" />
+                        android:layout_height="112dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/zeus" />
 
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="128dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginRight="24dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
                         android:background="@android:color/transparent"
-                        android:onClick="statueOfZeus"
-                        android:text="Statue of Zeus at Olympia" />
+                        android:onClick="statueOfZeus" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/statue_of_zeus"
+                        android:layout_centerHorizontal="true"
+                        android:text="Statue of Zeus at Olympia"
+                        android:textAllCaps="true"
+                        android:textColor="#212121"
+                        android:textSize="8sp" />
 
                 </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@android:color/darker_gray" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="128dp">
+                    android:layout_height="150dp">
 
                     <ImageView
-                        android:src="@drawable/colossus"
+                        android:id="@+id/colossus"
                         android:layout_width="match_parent"
-                        android:layout_height="128dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginRight="24dp" />
+                        android:layout_height="112dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/colossus" />
 
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="128dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="24dp"
-                        android:layout_marginRight="24dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
                         android:background="@android:color/transparent"
-                        android:onClick="colossus"
-                        android:text="Colossus of Rhodes" />
+                        android:onClick="colossus" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/colossus"
+                        android:layout_centerHorizontal="true"
+                        android:text="Colossus of Rhodes"
+                        android:textAllCaps="true"
+                        android:textColor="#212121"
+                        android:textSize="8sp" />
 
                 </RelativeLayout>
+
             </LinearLayout>
 
         </LinearLayout>

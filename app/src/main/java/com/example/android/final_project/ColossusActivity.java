@@ -2,11 +2,12 @@ package com.example.android.final_project;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 /**
  * Created by Badman on 03.04.2016.
  */
-public class ColossusActivity extends Activity {
+public class ColossusActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
